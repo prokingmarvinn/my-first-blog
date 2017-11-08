@@ -1,0 +1,27 @@
+{% extends 'veterinarias/base.html' %}
+
+    {% block content %}
+    <html>
+    <style>
+    body {
+        background-color: lightblue;
+    }
+
+    h1 {
+        color: white;
+        text-align: center;
+    }
+
+    p {
+        font-family: verdana;
+        font-size: 20px;
+    }
+    </style>
+    <div style="background-color:Silver;">
+        <h1>Nuevo Veterinario y Consulta</h1>
+        <form method="POST" class="post-form">{% csrf_token %}
+            {{ formulario.as_p }}
+            <button type="submit" class="save btn btn-default">Guardar</button>
+        </form>
+        <html>
+    {% endblock %}

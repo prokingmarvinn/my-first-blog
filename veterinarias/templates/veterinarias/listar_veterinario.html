@@ -1,0 +1,13 @@
+{% extends 'peliculas/base.html' %}
+
+    {% block content %}
+    <div>
+  <h1><a href="/">Consultas</a></h1>
+</div>
+{% for consulta in consultas %}
+  <div>
+      <h1><a href = "{% url 'veterinario_detalle' pk=consulta.pk %}">Nombre: {{ consulta.nombre_veterinario }}</p>
+      <p>Fecha de la consulta: {{ consulta.fecha_consulta }}</p>
+  </div>
+{% endfor %}
+    {% endblock %}
